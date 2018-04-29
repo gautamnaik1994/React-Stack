@@ -1,0 +1,9 @@
+{
+	"presets": [
+		["@babel/preset-env",{"targets":{"node":"current"}}],
+		"@babel/preset-react",
+		["@babel/preset-stage-2", { "decoratorsLegacy": true }]
+	],
+	"plugins": ["react-hot-loader/babel"],
+	"ignore": ["node_modules", "dist","public","build"],
+}
