@@ -21,6 +21,10 @@
   "rules": {
     "prettier/prettier": "error",
     "import/no-extraneous-dependencies": 1,
-    "react/jsx-filename-extension": 0
+		"react/jsx-filename-extension": 0,
+		"indent": ["off", "tab"],
+		"no-tabs": "off",
+		"react/jsx-indent":"off",
+		"react/jsx-indent-props":"off"
   }
 }

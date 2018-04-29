@@ -1,14 +1,16 @@
 {
   "name": "react-stack",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal React Boilerplate",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --mode development --config webpack.config.dev.js",
     "prebuild": "rimraf dist",
     "build": "webpack --mode production --config webpack.config.prod.js",
     "test": "jest",
-    "pretty": "prettier --write \"**/*.js\" --config .prettierrc"
+		"pretty": "prettier --write \"**/*.js\" --config .prettierrc",
+		"pretty-scss": "prettier --write \"**/*.scss\" --config .prettierrc",
+		"precommit": "lint-staged"
   },
   "author": "Gautam Naik",
   "license": "ISC",
@@ -80,7 +82,10 @@
       "js"
     ],
     "testMatch": [
-      "**/__tests__/*.(ts|tsx|js)"
+      "**/__tests__/*.(js)"
     ]
+	},
+	"lint-staged": {
+    "*.{js,scss}": ["npm run pretty","npm run pretty-scss", "git add"]
   }
 }
