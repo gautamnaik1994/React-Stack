@@ -1,4 +1,6 @@
-# React Starter Kit
+# React Starter Kit   
+  [![Build Status](https://travis-ci.org/gautamnaik1994/React-Stack.svg?branch=master)](https://travis-ci.org/gautamnaik1994/React-Stack)
+
 
 One Paragraph of project description goes here
 
