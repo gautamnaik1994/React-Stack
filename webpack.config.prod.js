@@ -13,7 +13,7 @@ module.exports = {
 	mode: 'production',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].[chunkhash].js',
+		filename: '[name].[chunkhash:8].js',
 	},
 	plugins: [
 		new WebpackBar({
@@ -25,7 +25,7 @@ module.exports = {
 			template: './src/views/index.html',
 		}),
 		new MiniCssExtractPlugin({
-			filename: '[name].[chunkhash].css',
+			filename: '[name].[chunkhash:8].css',
 		}),
 		new BundleAnalyzerPlugin(),
 		new workboxPlugin.GenerateSW({
@@ -62,9 +62,15 @@ module.exports = {
 					chunks: 'all',
 					enforce: true,
 				},
+				commons: {
+					chunks: 'initial',
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendors',
+				},
 			},
 		},
 	},
+
 	resolve: {
 		modules: ['node_modules'],
 		extensions: ['.js', '.jsx'],

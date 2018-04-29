@@ -10,6 +10,7 @@
     "test": "jest",
 		"pretty": "prettier --write \"**/*.js\" --config .prettierrc",
 		"pretty-scss": "prettier --write \"**/*.scss\" --config .prettierrc",
+		"format": "prettier --write '**/*.{js,scss}' ",
 		"precommit": "lint-staged"
   },
   "author": "Gautam Naik",
