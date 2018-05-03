@@ -8,10 +8,10 @@
     "prebuild": "rimraf dist",
     "build": "webpack --mode production --config webpack.config.prod.js",
     "test": "jest",
-		"pretty": "prettier --write \"**/*.js\" --config .prettierrc",
-		"pretty-scss": "prettier --write \"**/*.scss\" --config .prettierrc",
-		"format": "prettier --write '**/*.{js,scss}' ",
-		"precommit": "lint-staged"
+    "pretty": "prettier --write \"**/*.js\" --config .prettierrc",
+    "pretty-scss": "prettier --write \"**/*.scss\" --config .prettierrc",
+    "format": "prettier --write '**/*.{js,scss}' ",
+    "precommit": "lint-staged"
   },
   "author": "Gautam Naik",
   "license": "ISC",
@@ -51,6 +51,7 @@
     "react-test-renderer": "^16.3.2",
     "resolve-url-loader": "^2.3.0",
     "rimraf": "^2.6.2",
+    "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.6.0",
@@ -85,8 +86,12 @@
     "testMatch": [
       "**/__tests__/*.(js)"
     ]
-	},
-	"lint-staged": {
-    "*.{js,scss}": ["npm run pretty","npm run pretty-scss", "git add"]
+  },
+  "lint-staged": {
+    "*.{js,scss}": [
+      "npm run pretty",
+      "npm run pretty-scss",
+      "git add"
+    ]
   }
 }
