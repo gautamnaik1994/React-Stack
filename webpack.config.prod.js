@@ -9,6 +9,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const workboxPlugin = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 
+process.env.NODE_ENV="production";
+
 module.exports = {
 	mode: 'production',
 	output: {

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import MainRoute from './router';
 
 function init() {
-	if ('serviceWorker' in navigator) {
+	if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
 		window.addEventListener('load', () => {
 			navigator.serviceWorker
 				.register('/sw.js')
